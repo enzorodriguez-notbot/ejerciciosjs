@@ -51,9 +51,11 @@ const promedioEdades =
 console.log(`la edad promedio es ${promedioEdades}`);
 
 //5- Actualizar información: Implementa una función que reciba el array de personas, el nombre de una persona y un objeto con nueva información, y actualice la información de esa persona en el array.
+let personaaCambiar = prompt("dime el nombre que quieres actualizar");
+let nuevoNombre = prompt("dime le nuevo nombre");
 
-let personaaCambiar = [...personas];
-
-const encontrar = numeros.find((personas) => {
-  return personaaCambiar;
-});
+const personaBusqueda = personas.find(
+  (persona) => persona.nombre === personaaCambiar
+);
+personaBusqueda.nombre = nuevoNombre;
+console.log(personas);
